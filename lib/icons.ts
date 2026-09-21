@@ -1,0 +1,82 @@
+import {
+  Award,
+  Bell,
+  Blocks,
+  Bot,
+  Brain,
+  Building2,
+  Camera,
+  Cloud,
+  Code,
+  Cpu,
+  Database,
+  Eye,
+  Gauge,
+  GraduationCap,
+  Languages,
+  Layers,
+  Layout,
+  Medal,
+  Network,
+  Puzzle,
+  Rocket,
+  Server,
+  ShieldCheck,
+  Smartphone,
+  Sparkles,
+  Store,
+  Target,
+  Timer,
+  TrainFront,
+  Trophy,
+  Users,
+  Utensils,
+  Workflow,
+  type LucideIcon,
+} from "lucide-react";
+
+/**
+ * Data files reference icons by string name so the content stays serializable
+ * (server -> client component boundary). Resolve names to components here.
+ */
+export const icons = {
+  Award,
+  Bell,
+  Blocks,
+  Bot,
+  Brain,
+  Building2,
+  Camera,
+  Cloud,
+  Code,
+  Cpu,
+  Database,
+  Eye,
+  Gauge,
+  GraduationCap,
+  Languages,
+  Layers,
+  Layout,
+  Medal,
+  Network,
+  Puzzle,
+  Rocket,
+  Server,
+  ShieldCheck,
+  Smartphone,
+  Sparkles,
+  Store,
+  Target,
+  Timer,
+  TrainFront,
+  Trophy,
+  Users,
+  Utensils,
+  Workflow,
+} as const satisfies Record<string, LucideIcon>;
+
+export type IconName = keyof typeof icons;
+
+export function getIcon(name: IconName): LucideIcon {
+  return icons[name];
+}
